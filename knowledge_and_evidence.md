@@ -103,35 +103,39 @@ python3 main.py
 5. Examining `smiley.py`, provide an example of a class variable and an instance variable (attribute). Explain **why** one is defined as a class variable and the other as an instance variable.
 
 > Your answer here
->
+> class variable - YELLOW = (255, 255, 0)
+> instance variable - self.pixels = [O, Y, Y, Y, Y, Y, Y, O]
+> Class variable don't have to change the instance and shared by all instance but instance variable can be able to change so that each object hold own value.
 
 6. Examine `happy.py`, and identify the constructor (initializer) for the `Happy` class:
    1. What is the purpose of a constructor (in general) and this one (in particular)?
 
    > Your answer here
-   >
+   >　__init__
+   > happy.py initialise smiley.py and adjust pixel then draw mouth and eyes.
 
    2. What statement(s) does it execute (consider the `super` call), and what is the result?
 
    > Your answer here
-   >
+   >super().__init__() will call smiley.py then display smile mouth and eyes 
 
 ### 2.3. Code style
 
 1. What code style is used in the code? Is it likely to be the same as the code style used in the SenseHat? Give to reasons as to why/why not:
 
 > Your answer here
->
+>　PEP8 code style is used in this code. SenseHat is also generally based on PEP8 so we could say that it's a same style. For example, snake_case for functions, spaces after comma.
 
 2. List three aspects of this convention you see applied in the code.
 
 > Your answer here
->
+> snake_case functions, uppercase, spaces after comma
 
 3. Give two examples of organizational documentation in the code.
 
 > Your answer here
->
+> # We have encapsulated the SenseHat object
+> """Show the smiley on the screen. """
 
 ### 2.4. Identifying and understanding classes
 
@@ -144,17 +148,19 @@ python3 main.py
 | Class Name | Super or Sub? | Direct parent(s) |
 | ---------- | ------------- | ---------------- |
 | NotReal    | Sub           | NotRealParent    |
-|   ...      |   ...         |      ...         |
+| Smiley     | Super         | object        |
+| Happy | Sub | Smiley
+| Sad | Sub | Smiley 
 
 2. Explain the concept of abstraction, giving an example from the project (note "implementing an ABC" is **not** in itself an example of abstraction). (Max 150 words)
 
 > Your answer here
->
+> Concept of abstraction is to hide implementation details and only show the essential operation. For example, Happy classes abstract drawing an expression via draw_mouth and draw_eyes.
 
 3. What is the name of the process of deriving from base classes? What is its purpose in this project? (Max 150 words)
 
 > Your answer here
->
+> inheritance, Use shared behavior in the base class Smiley and Happy and Sad class can change only the expression so that we can avoid the duplicaion and maintain easier.
 
 ### 2.5. Compare and contrast classes
 
@@ -162,28 +168,31 @@ Compare and contrast the classes Happy and Sad.
 
 1. What is the key difference between the two classes?
    > Your answer here
-   >
+   > Happy class is forming by smiling mouth and eyes while Sad class is sad mouth and eyes.
+   
 2. What are the key similarities?
    > Your answer here
-   >
+   > Both of classes inheit smiley class and call super().__init__().
+   
 3. What difference stands out the most to you and why?
    > Your answer here
-   >
+   > Sad class is using selection (if, else) but Happy class is using instance variables instead.
+   
 4. How does this difference affect the functionality of these classes
    > Your answer here
-   >
+   > Using selection would be more readable and maintainable for the future adjustment.
 
 ### 2.6. Where is the Sense(Hat) in the code?
 
 1. Which class(es) utilize the functionality of the SenseHat?
    > Your answer here
-   >
+   > Smiley, Sad, Happy
 2. Which of these classes directly interact with the SenseHat functionalities?
    > Your answer here
-   >
+   > Smiley
 3. Discuss the hiding of the SenseHAT in terms of encapsulation (100-200 Words)
    > Your answer here
-   >
+   > This code encapsulate the access of SenseHat in smiley. They're hiding the things like brightness control etc behind the Smiley method so that caller use high level operation instead of touching the device. Ecapsulation hides implementation details and interface. 
 
 ### 2.7. Sad Smileys Can’t Blink (Or Can They?)
 
@@ -194,22 +203,23 @@ Unlike the `Happy` smiley, the current implementation of the `Sad` smiley does n
 1. Does the code's author believe that every `Smiley` should be able to blink? Explain.
 
 > Your answer here
->
+> No, the blink method exists only in Happy so only Happy class able to blink.
 
 2. For those smileys that blink, does the author expect them to blink in the same way? Explain.
 
 > Your answer here
->
+> No, Each class can implement the different details.
 
 3. Referring to the implementation of blink in the Happy and Sad Smiley classes, give a brief explanation of what polymorphism is.
 
 > Your answer here
->
+> Polymorphism is the same method name can exhibit different behavior depending on the object type.  
 
 4. How is inheritance used in the blink method, and why is it important for polymorphism?
 
 > Your answer here
->
+> Inheritance can share Happy and Sad methods and they can add blink, and keep common interface but vary behavior so that polymorphism would be enable.
+
 1. **Implement Blink in Sad Class:**
 
    - Create a new method called `blink` within the Sad class. Ensure you use the same method signature as in the Happy class:
@@ -227,11 +237,13 @@ Unlike the `Happy` smiley, the current implementation of the `Sad` smiley does n
 
 Include a screenshot of the sad smiley or the modified `main.py`:
 
-![Sad Smiley Blinking](screenshots/sad_blinking.png)
+![Sad Smiley Blinking](screenshots/sad_blinking.png)<img width="664" height="589" alt="blink" src="https://github.com/user-attachments/assets/2002d26a-6dda-4376-86b6-b01f532da592" />
+
 
 - Observe and document the Sad smiley as it blinks its eyes. Describe any adjustments or issues encountered during implementation.
 
   > Your answer here
+  > After run the code, it's closed eyes first then open, and close again. I forgot to change from original code which was already in main.py (smiley = Sad() this part)
 
   ### 2.8. If It Walks Like a Duck…
 
