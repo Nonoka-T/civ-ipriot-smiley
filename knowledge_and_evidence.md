@@ -71,17 +71,17 @@ python3 main.py
 
    | Type                    | name       | value          |
    | ----------              | ---------- | -------------- |
-   | built-in primitive type | _          |  _             |
-   | built-in composite type | _          |  _             |
-   | user-defined type       | _          |  _             |
+   | built-in primitive type | _ dimmed         |  _  True           |
+   | built-in composite type | _ self.pixels    |  _  [O, Y, Y, Y, Y, Y, Y, O]    |
+   | user-defined type       | _ self.sense_hat         |  _ SenseHat()           |
 
 2. Fill in (`_`) the following table based on the code in `smiley.py`:
 
    | Object                   | Type                    |
    | ------------             | ----------------------- |
-   | self.pixels              | _                       |
-   | A member of self.pixels  | _                       |
-   | self                     | _                       |
+   | self.pixels              | _ list                      |
+   | A member of self.pixels  | _ tuple                      |
+   | self                     | _ Smiley                      |
 
 3. Examine the code for `smiley.py`, `sad.py`, and `happy.py`. Give an example of each of the following control structures using an example from **each** of these files. Include the first line and the line range:
 
