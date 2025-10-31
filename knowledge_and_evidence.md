@@ -87,18 +87,18 @@ python3 main.py
 
    | Control Flow | File       | First line  | Line range  |
    | ------------ | ---------- | ----------- | ----------- |
-   |  sequence    |  _         | _           | _           |
-   |  selection   | _          | _           | _           |
-   |  iteration   | _          | _           | _           |
+   |  sequence    |  _ happy.py, sad.py, smiley.py | _ 10, 5, 11| _ 10-14, 5-9, 11-26|
+   |  selection   | _ happy.py, sad.py | _ 31, 26  | _ 31, 26-30   |
+   |  iteration   | _ happy.py, sad.py | _ 21, 16  | _ 21-22, 16-17 |
 
 4. Though everything in Python is an object, it is sometimes said to have four "primitive" types. Examining the three files `smiley.py`, `sad.py`, and `happy.py`, identify which of the following types are used in any of these files, and give an example of each (use an example from the code, if applicable, otherwise provide an example of your own):
 
    | Type                    | Used? | Example |
    | ----------------------- | ----- | --------|
-   | int                     | _     | _          |
-   | float                   | _     | _          |
-   | str                     | _     | _          |
-   | bool                    | _     | _          |
+   | int                     | _Yes  | _ eyes = [10, 13, 18, 21]  |
+   | float                   | _Yes  | _ delay=0.25  |
+   | str                     | _No   | _ name = "Nonoka"    |
+   | bool                    | _Yes  | _ dimmed=True |
 
 5. Examining `smiley.py`, provide an example of a class variable and an instance variable (attribute). Explain **why** one is defined as a class variable and the other as an instance variable.
 
