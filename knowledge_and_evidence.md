@@ -267,12 +267,13 @@ Include a screenshot of the sad smiley or the modified `main.py`:
   4. **Implementation Flexibility:** Explain why you could grant the Sad Smiley a blinking feature similar to the Happy Smiley's implementation, even without directly using `Blinkable`.
 
   > Your answer here
-  > 
+  > By duck typying, it behaves like a blinkable object without inheriting from blinkable as long as Sad implements blink.
 
   5. **Concept and Language Specificity:** In relation to your response to question (4), what is this capability known as, and why is it feasible in Python and many other dynamically typed languages but not in most statically typed programming languages like C#? **Clue** This concept is hinted at in the title of this section.
 
   > Your answer here
-  > 
+  > Duck typing
+  > Python object suitability support rather than declared type and determined bt the operations.
 
   ***
 
@@ -286,9 +287,14 @@ Include a screenshot of the sad smiley or the modified `main.py`:
 
      1. Which colors are defined and in which class(s)?
         > Your answer here
+        > Color - white, green, red, yellow, blank, Class- Smiley
+        
      2. What type of variables hold these colors? Are the values expected to change during the program's execution? Explain your answer.
         > Your answer here
+        > Variable - class, the values don't change normally as they function as constants.
+        
      3. Add the color blue to the appropriate class using the appropriate format and values.
+        BLUE = (0,0,255)
 
   2. **Usage of Color Variables:**
 
@@ -310,6 +316,7 @@ Include a screenshot of the sad smiley or the modified `main.py`:
   2. **Refactor subclasses to use the `complexion` method:** Modify any subclass that directly accesses the color variable to instead utilize the new `complexion` method. This ensures that color handling is centralized and can be easily modified in the future.
 
   3. **Determine the applicable Object-Oriented principle:** Consider whether Abstraction, Polymorphism, Inheritance, or Encapsulation best applies to the modifications made in this step.
+  - Abstraction and Encapsulation 
 
   4. **Verify the implementation:** Ensure that the modifications function as expected. The smileys should still display in yellow, confirming that the new method correctly replaces the direct color references.
 
@@ -327,7 +334,8 @@ Include a screenshot of the sad smiley or the modified `main.py`:
 
   4. **Bulk rename:** We want to update our grid to use the value of complexion, but we have so many `Y`'s in the grid. Use your IDE's refactoring tool to rename all instances of the **symbol** `Y` to `X`. Where `X` is the value of the `complexion` variable. Include a screenshot evidencing you have found the correct refactor tool and the changes made.
 
-  ![Bulk Rename](screenshots/bulk_rename.png)
+  ![Bulk Rename](screenshots/bulk_rename.png)<img width="465" height="279" alt="Screenshot 2025-11-03 at 09 48 14" src="https://github.com/user-attachments/assets/138a8f99-4793-4619-892b-9cc9e733b7b0" />
+
 
   5. **Update the `complexion` method:** Adjust this method to return `self.my_complexion`, ensuring that whatever color is assigned during instantiation is what the smiley displays.
 
