@@ -300,10 +300,12 @@ Include a screenshot of the sad smiley or the modified `main.py`:
 
      1. In which classes are the color variables used?
         > Your answer here
+        > Smiley: defines the color constants and uses them to build the pixel grid.　Happy: uses colors for drawing eyes and mouth. Sad: uses colors for drawing eyes and mouth. Angry: uses colors for drawing eyes and mouth
 
   3. **Simple Method to Change Colors:**
   4. What is the easiest way you can think to change the smileys to green? Easiest, not necessarily the best!
      > Your answer here
+     > The easiest way to change the smileys to green is to modify the Smiley __init__ method to use self.GREEN instead of self.YELLOW as the default complexion
 
 
 
