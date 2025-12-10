@@ -262,7 +262,7 @@ Include a screenshot of the sad smiley or the modified `main.py`:
   3. **OO Principle Identification:** Regarding your answer to question (2), which Object-Oriented (OO) principle does this represent? Choose from the following and justify your answer in 1-2 sentences: Abstraction, Polymorphism, Inheritance, Encapsulation.
 
   > Your answer here
-  > Polymorphism would be allow us to implement specific class with same interface.
+  > The Object-Oriented principle demonstrated by Blinkable is Abstraction.　Blinkable defines the abstract blink() method, specifying that objects can blink without detailing how.　This separates the general concept of blinking from the specific implementation in Happy or Sad classes, which is the core idea of abstraction.
 
   4. **Implementation Flexibility:** Explain why you could grant the Sad Smiley a blinking feature similar to the Happy Smiley's implementation, even without directly using `Blinkable`.
 
