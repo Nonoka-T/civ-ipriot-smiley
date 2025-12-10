@@ -147,10 +147,10 @@ python3 main.py
 
 | Class Name | Super or Sub? | Direct parent(s) |
 | ---------- | ------------- | ---------------- |
-| NotReal    | Sub           | NotRealParent    |
+| Blinkable    | Super          | object   |
 | Smiley     | Super         | object        |
-| Happy | Sub | Smiley
-| Sad | Sub | Smiley 
+| Happy | Sub | Smiley、Blinkable
+| Sad | Sub | Smiley
 
 2. Explain the concept of abstraction, giving an example from the project (note "implementing an ABC" is **not** in itself an example of abstraction). (Max 150 words)
 
