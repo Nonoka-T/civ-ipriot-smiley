@@ -147,7 +147,7 @@ python3 main.py
 
 | Class Name | Super or Sub? | Direct parent(s) |
 | ---------- | ------------- | ---------------- |
-| Blinkable    | Super          | object   |
+| Blinkable    | Super, Sub          | object   |
 | Smiley     | Super         | object        |
 | Happy | Sub | Smiley、Blinkable
 | Sad | Sub | Smiley
