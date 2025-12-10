@@ -32,6 +32,7 @@ class Sad(Smiley):
             self.pixels[pixel] = eyes
 
 
+
     def blink(self, delay=0.25):
         self.draw_eyes(wide_open=False)
         self.show()
